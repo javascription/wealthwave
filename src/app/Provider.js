@@ -11,6 +11,7 @@ const Provider = ({children}) => {
             </ThemeProvider>
         </SessionProvider>
     )
+
 }
 
 export default Provider;
