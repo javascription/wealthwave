@@ -1,6 +1,5 @@
 import "./globals.css";
-import { ThemeProvider } from 'next-themes';
-import SessionWrapper from './SessionWrapper';
+import Provider from './Provider';
 import { Raleway } from "next/font/google";
 import Navbar from "./components/Navbar";
 
@@ -20,12 +19,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${raleway.className} antialiased m-0 p-0 w-screen h-screen scroll-smooth overflow-x-hidden`}
       >
-        <SessionWrapper>
-          <ThemeProvider attribute="class" defaultTheme='system' enableSystem>
-            <Navbar />
-            {children}
-          </ThemeProvider>
-        </SessionWrapper>
+        <Provider>
+          <Navbar />
+          {children}
+        </Provider>
       </body>
     </html>
   );

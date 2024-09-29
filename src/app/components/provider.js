@@ -7,5 +7,6 @@ export const Provider = ({ children }) => {
         <ThemeProvider attribute="class" defaultTheme='system' enableSystem>
             {children}
         </ThemeProvider>
+        
     )
 }
