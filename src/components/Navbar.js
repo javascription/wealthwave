@@ -68,14 +68,14 @@ export default function Navbar() {
 
                     
                     <FontAwesomeIcon icon={faXmark} onClick={() => closeWrapper()} ref={closeIconRef} 
-                        className="hidden text-[3.3rem] border-4 rounded-2xl mr-12" />
+                        className="hidden text-[3.3rem] border-4 rounded-2xl mr-12 border-black" />
                 </div>
             </header>
             <div ref={wrapperRef} 
             className="hidden flex-col top-[0%] fixed w-[100%] h-screen
                         p-13-percent backdrop-blur-[15px]
                         text-center items-center z-[1]" >
-                <ul className="gap-8 flex flex-col">
+                <ul className="gap-8 flex flex-col mt-[7rem] ">
                     <li><Link href="/about" className="text-[2.3rem]">About</Link></li>
                     <li><Link href="/learn" className="text-[2.3rem]">Learn</Link></li>
                     <li><Link href="/dashboard" className="text-[2.3rem]">Dashboard</Link></li>
