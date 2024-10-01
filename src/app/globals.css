@@ -13,7 +13,7 @@
   --background: #f8f8fc;
   --primary: #3448cb;
   --secondary: #8493f0;
-  --accent: #f000e0;
+  --accent: #E774DE;
 }
 
 .dark {
@@ -21,7 +21,7 @@
   --background: #030307;
   --primary: #3448cb;
   --secondary: #0f1e7c;
-  --accent: #ff0dee;
+  --accent: #E774DE;
 }
 
 body {
@@ -64,6 +64,37 @@ body {
   }
 }
 
-.bg-img {
-  background-image: url('https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg');
+.login {
+  padding: 0.3rem 1.5rem;
+  border-radius: 10px;
+  transition: 200ms ease-in-out;
+  border: 2px solid var(--text);
+}
+
+.login:hover {
+  background: #d3d6dd;
+  color: var(--secondary);
+  border-color: #d3d6dd;
+}
+.intro {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  width: 60%;
+  margin: auto;
+  color: #fff;
+  text-align: start;
+  font-weight: 900;
+}
+
+.p {
+  text-align: justify;
+  text-justify: inter-word;
+  width: 80%;
+  margin-top: 3%;
+  font-size: 1.2rem;
+  font-weight: 700;
 }

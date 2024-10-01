@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
@@ -9,6 +10,7 @@ import Link from "next/link";
 import ThemeSwitch from './ThemeToggle';
 
 export default function Navbar() {
+    const { data: session } = useSession();
     const navbarRef = useRef(null);
     const wrapperRef = useRef(null);
     const barsIconRef = useRef(null);
@@ -52,11 +54,14 @@ export default function Navbar() {
                     <div className="text-2xl ml-[3rem]"><Link href="/" className="mo:text-[2.5rem]">WealthWave</Link></div>
                     <ul className="relative flex gap-12 mo:hidden items-center">
                         <li><Link href="/about" className="relative">About</Link></li>
-                        <li><Link href="/team" className="relative">Team</Link></li>
                         <li><Link href="/learn" className="relative">Learn</Link></li>
                         <li><Link href="/dashboard" className="relative">Dashboard</Link></li>
                         <li><Link href="/contact" className="relative">Contact</Link></li>
-                        <li><Link href="/login" className="relative">Login</Link></li>
+                        <li>
+                            <Link href="/login" className="relative login">
+                                {session && session.user ? session.user.name.split(" ")[0] : "Login"}
+                            </Link>
+                        </li>
                         <li className="relative mr-[3.6rem]">
                             <ThemeSwitch />
                         </li>
@@ -75,11 +80,10 @@ export default function Navbar() {
                         text-center items-center z-[1]" >
                 <ul className="gap-8 flex flex-col">
                     <li><Link href="/about" className="text-[2.3rem]">About</Link></li>
-                    <li><Link href="/team" className="text-[2.3rem]">Team</Link></li>
                     <li><Link href="/learn" className="text-[2.3rem]">Learn</Link></li>
                     <li><Link href="/dashboard" className="text-[2.3rem]">Dashboard</Link></li>
                     <li><Link href="/contact" className="text-[2.3rem]">Contact</Link></li>
-                    <li><Link href="/login" className="text-[2.3rem]">Login</Link></li>
+                    <li><Link className="text-[2.3rem] mx:text-[1.9rem] login" href="/login">{session && session.user ? session.user.name.split(" ")[0] : "Login"}</Link></li>
                     <li className="text-[2.3rem] mx:text-[1.9rem]">
                         <ThemeSwitch />
                     </li>
