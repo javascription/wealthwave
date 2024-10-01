@@ -58,12 +58,9 @@ export default function Navbar() {
                         <li><Link href="/dashboard" className="relative">Dashboard</Link></li>
                         <li><Link href="/contact" className="relative">Contact</Link></li>
                         <li>
-                            <Link href="/login" className="relative login">
+                            <Link href="/login" className="relative login mr-[3.6rem]">
                                 {session && session.user ? session.user.name.split(" ")[0] : "Login"}
                             </Link>
-                        </li>
-                        <li className="relative mr-[3.6rem]">
-                            <ThemeSwitch />
                         </li>
                     </ul>
                     <FontAwesomeIcon icon={faBars} id="bars" onClick={() => openWrapper()} ref={barsIconRef} 
@@ -84,9 +81,6 @@ export default function Navbar() {
                     <li><Link href="/dashboard" className="text-[2.3rem]">Dashboard</Link></li>
                     <li><Link href="/contact" className="text-[2.3rem]">Contact</Link></li>
                     <li><Link className="text-[2.3rem] mx:text-[1.9rem] login" href="/login">{session && session.user ? session.user.name.split(" ")[0] : "Login"}</Link></li>
-                    <li className="text-[2.3rem] mx:text-[1.9rem]">
-                        <ThemeSwitch />
-                    </li>
                 </ul>
             </div>
         </section>

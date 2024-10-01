@@ -16,19 +16,10 @@
   --accent: #E774DE;
 }
 
-.dark {
-  --text: #f9f9fb;
-  --background: #030307;
-  --primary: #3448cb;
-  --secondary: #0f1e7c;
-  --accent: #E774DE;
-}
-
 body {
   color: var(--text);
   background: var(--background);
 }
-
 
 .gradient-text {
   font-weight: 800;
