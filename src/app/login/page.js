@@ -21,7 +21,7 @@ export default function Login() {
                     </h1>
                     <button
                         onClick={() => signOut()}
-                        className="text-[#f9f9fb] w-[400px] font-bold border border-accent hover:scale-110 shadow-sm rounded-lg py-3 bg-primary flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow-lg"
+                        className="text-text w-[400px] font-bold border-2 border-black border-accent hover:scale-110 shadow-sm rounded-lg py-3 bg-primary flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow-lg"
                     >
                         Sign Out
                     </button>
