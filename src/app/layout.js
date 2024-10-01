@@ -1,5 +1,5 @@
 import "./globals.css";
-import Provider from './Provider';
+import Provider from './ThemeProvider';
 import { Raleway } from "next/font/google";
 import Navbar from "../components/Navbar";
 
