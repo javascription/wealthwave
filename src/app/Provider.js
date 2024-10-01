@@ -5,11 +5,11 @@ import { SessionProvider } from 'next-auth/react'
 
 const Provider = ({children}) => {
     return (
-        <SessionProvider>
-            <ThemeProvider attribute="class" defaultTheme='system' enableSystem>
+        <ThemeProvider attribute="class" defaultTheme='system' enableSystem>
+            <SessionProvider>
                 {children}
-            </ThemeProvider>
-        </SessionProvider>
+            </SessionProvider>
+        </ThemeProvider>
     )
 
 }
