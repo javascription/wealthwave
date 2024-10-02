@@ -10,7 +10,7 @@ const BlogSection = () => {
           </h2>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="flex flex-col gap-8">
           {/* First Article */}
           <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
             <div className="flex justify-between items-center mb-5 text-gray-500">

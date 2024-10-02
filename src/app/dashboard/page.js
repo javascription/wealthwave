@@ -12,9 +12,9 @@ const Dashboard = () => {
     }
 
     return (
-        <section className="w-screen h-screen flex flex-col justify-center items-center top-0 left-0">
+        <>
              {session ? (
-                        <>
+                        <section className="w-screen h-screen flex flex-col justify-center items-center top-0 left-0">
                             <div className="lg:ml-6 lg:pl-4 lg:flex lg:flex-col lg:w-[75%] mt-5 mx-2">
 
                             <div className="lg:flex gap-4 items-stretch">
@@ -91,7 +91,7 @@ const Dashboard = () => {
                                 </tbody>
                             </table>
                             </div>
-                    </>
+                        </section>
             ) : ( 
                 <section>
                     <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
@@ -105,7 +105,7 @@ const Dashboard = () => {
                 </section>
                 )
             }
-        </section>
+        </>
     );
 };
 
