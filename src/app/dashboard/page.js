@@ -58,7 +58,7 @@ const Dashboard = () => {
                                     <tr className="border-b w-full">
                                         <td className="px-4 py-2 text-left align-top w-1/2">
                                             <div>
-                                                <h2>Comercio</h2>
+                                                <h2>Trade</h2>
                                                 <p>24/07/2023</p>
                                             </div>
                                         </td>
@@ -69,7 +69,7 @@ const Dashboard = () => {
                                     <tr className="border-b w-full">
                                         <td className="px-4 py-2 text-left align-top w-1/2">
                                             <div>
-                                                <h2>Comercio</h2>
+                                                <h2>Deposit</h2>
                                                 <p>24/06/2023</p>
                                             </div>
                                         </td>
@@ -80,7 +80,7 @@ const Dashboard = () => {
                                     <tr className="border-b w-full">
                                         <td className="px-4 py-2 text-left align-top w-1/2">
                                             <div>
-                                                <h2>Comercio</h2>
+                                                <h2>Withdraw</h2>
                                                 <p>02/05/2023</p>
                                             </div>
                                         </td>
